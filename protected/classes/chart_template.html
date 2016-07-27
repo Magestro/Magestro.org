@@ -1,0 +1,31 @@
+<script>
+    $(function () {
+        $(function () {
+            google.charts.setOnLoadCallback(drawChart{add_name});
+            function drawChart{add_name}() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('date', 'Дата');
+                data.addColumn('number', 'Цена {currency}');
+                data.addRows({chart_array});
+
+                var options = {
+                    title: '{title}',
+                    curveType: 'function',
+                    legend: {position: 'top'},
+                    vAxis: {
+                        title: "Price",
+                        viewWindowMode:'explicit'
+                    },
+                    hAxis: {
+                        title: "Date"
+                    }
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('chart{add_name}'));
+
+                chart.draw(data, options);
+            }
+        });
+    });
+</script>
+<div id="chart{add_name}"></div>
