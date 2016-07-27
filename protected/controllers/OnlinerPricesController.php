@@ -13,6 +13,42 @@ class OnlinerPricesController extends Controller
         return false;
     }
 
+    /**
+     * @return array action filters
+     */
+    public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    }
+
+    /**
+     * Specifies the access control rules.
+     * This method is used by the 'accessControl' filter.
+     * @return array access control rules
+     */
+    public function accessRules()
+    {
+        return array(
+            array('allow',
+                'actions'=>array('index','view'),
+                'users'=>array('*'),
+            ),
+            array('allow',
+                'actions'=>array('create'),
+                'users'=>array('@'),
+            ),
+            array('allow',
+                'actions'=>array('delete'),
+                'users'=>array('admin'),
+            ),
+            array('deny',
+                'users'=>array('*'),
+            )
+        );
+    }
+
     public function actionIndex()
     {
 
@@ -32,11 +68,12 @@ class OnlinerPricesController extends Controller
             )
         );
     }
+
     /**
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
-    public function actionCreate($id)
+    public function actionCreate($id = 0)
     {
         if($id)
             $model = $this->loadModel($id);

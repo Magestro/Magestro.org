@@ -42,7 +42,15 @@ $page_title = isset($this->pageTitle) ? $this->pageTitle : Yii::app()->name;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand ajax-nav" href="/">magestro.org</a>
+        <?if(Yii::app()->user->isGuest):?>
+            <a class="navbar-brand ajax-nav" href="/">magestro.org</a>
+        <?else:?>
+            <span class="navbar-brand">
+                Привет, <?=Yii::app()->user->getName()?>!
+                <?=CHtml::link('<span class="glyphicon glyphicon-log-out"></span> Выйти', ['site/logout']);?>
+            </span>
+
+        <?endif;?>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

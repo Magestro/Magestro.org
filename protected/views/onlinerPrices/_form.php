@@ -32,7 +32,7 @@
 	</div>
 
 	<div class="form-group buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Изменить', ['class' => 'btn btn-primary']); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Изменить', ['class' => 'btn btn-primary pull-right']); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
