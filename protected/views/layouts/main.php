@@ -79,33 +79,42 @@ $page_title = isset($this->pageTitle) ? $this->pageTitle : Yii::app()->name;
         <div class="nav navbar-nav bottom-nav">
             <form class="form-horizontal container-fluid" role="form">
                 <fieldset>
-                    <span class="text-center">Я могу написать вам:</span>
                     <div class="form-group dark-input">
                         <div class="col-xs-10 nopadding">
-                            <input type="text" class="form-control" placeholder="example@mail.com">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="example@mail.com"
+                                title="я напишу на введённый левее e-mail"
+                            >
                         </div>
 
                         <div class="col-xs-2 nopadding">
-                            <button type="submit" style="max-width: 100%;" class="btn btn-md btn-default"
-                            onclick="javascript: alert('Иди нахуй, форма не работает, чо доебался'); return false;">></button>
+                            <button
+                                type="submit"
+                                style="max-width: 100%;"
+                                class="btn btn-md btn-default"
+                                onclick="javascript: alert('Иди нахуй, форма не работает, чо доебался'); return false;"
+                                title="я напишу на введённый левее e-mail"
+                            >></button>
                         </div>
                     </div>
                 </fieldset>
             </form>
             <hr/>
             <div class="copy container-fluid">
-                <div>
+                <div class="row">
                     &copy; 2016 Magestro;
                 </div>
-                <div>
+                <div class="row">
                     E-mail:
                     <a href="mailto:ratibor.bulatov@gmail.com">ratibor.bulatov@gmail.com</a>
                 </div>
-                <div>
+                <div class="row">
                     Skype:
                     <a href="skype:add?magestro_o">magestro</a>
                 </div>
-                <div>
+                <div class="row">
                     Life:
                    <a href="tel:375255290540">+ 375 (25)
                         529-05-40</a>
