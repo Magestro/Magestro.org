@@ -1,6 +1,6 @@
 <?php
 /* @var $this OnlinerPricesController */
-$this->pageTitle = 'Onliner Prices';
+$this->pageTitle = 'График изменения цен с Onliner';
 
 $this->breadcrumbs = array(
     'Onliner Prices',

@@ -2,17 +2,18 @@
 /* @var $this MyTextController */
 /* @var $model MyText */
 
-$this->breadcrumbs=array(
+$this->breadcrumbs = array(
 	'Onliner Prices' => ['index'],
 	'Create',
 );
 
+$current_title = ($model->isNewRecord ? 'Добавить' : 'Изменить') . ' ссылку' . ($model->isNewRecord ? '' : ' #'.$model->id);
+
+$this->pageTitle = $current_title;
 $this->menu = array(
 	array('label' => 'Список', 'url' => array('index')),
-	array('label' => 'Добавить ссылку', 'url' => array('create'), 'active' => true),
+	array('label' => $current_title, 'url' => array('create'), 'active' => true),
 );
 ?>
-
-<h3>Add item</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -1,6 +1,6 @@
 <?php
-/* @var $this MyTextController */
-/* @var $model MyText */
+/* @var $this OnlinerPricesController */
+/* @var $model OnlinerItems */
 /* @var $form CActiveForm */
 ?>
 
@@ -20,19 +20,19 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="form-group">
-		<?php echo $form->labelEx($model, 'title'); ?>
+		<?php echo $form->labelEx($model, 'Название'); ?>
 		<?php echo $form->textField($model, 'title', ['class' => 'form-control']); ?>
 		<?php echo $form->error($model, 'title'); ?>
 	</div>
 
 	<div class="form-group">
-		<?php echo $form->labelEx($model, 'link'); ?>
+		<?php echo $form->labelEx($model, 'Ссылка на предмет*'); ?>
 		<?php echo $form->textField($model,'link', ['class' => 'form-control']); ?>
 		<?php echo $form->error($model, 'link'); ?>
 	</div>
 
 	<div class="form-group buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', ['class' => 'btm btn-primary']); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Изменить', ['class' => 'btn btn-primary']); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
